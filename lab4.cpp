@@ -42,11 +42,11 @@ int main () {
 	cout << "Удаление всех чисел Фибоначчи" << endl;
 
 	int* noFib = new int[DSIZE];
-	for (int i = 0, j = 0; i < DSIZE; i++)
+	int i, j;
+	for (i = 0, j = 0; i < DSIZE; i++)
 		if (!checkFib(rndArray[i]))
 			noFib[j++] = rndArray[i];
-	std::sort(noFib, noFib + DSIZE);
-	printArray(noFib, DSIZE);
+	printArray(noFib, j);
 	delete[] rndArray;
 	delete[] noFib;
     
